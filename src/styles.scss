@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+$txt-color: cornflowerblue;
+$dark-blue: #2e2f57;
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(132, 138, 189);
+}
+body {
+  margin: 0;
+  font-family: "JetBrains Mono", Roboto, "Helvetica Neue", sans-serif;
+}
+a {
+  color: cornflowerblue;
+  text-decoration: none;
+
+  &:hover {
+    color: darkslateblue;
+  }
+}

@@ -1,0 +1,13 @@
+@import "~src/styles";
+
+.main-title {
+  color: $txt-color;
+  border-bottom: 1px solid;
+  padding: 1rem;
+  background-color: $dark-blue;
+  margin: 0;
+  font-size: xx-large;
+
+  display: flex;
+  justify-content: space-between;
+}

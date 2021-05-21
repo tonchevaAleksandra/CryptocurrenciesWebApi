@@ -1,0 +1,6 @@
+<h2>{{cryptoId.toUpperCase()}}</h2>
+<div *ngIf="coinData">
+  <h2>{{coinData.market_data.current_price.usd | currency }}</h2>
+  <img [src]="coinData.image.large" alt="Coin logo">
+</div>
+

@@ -1,0 +1,41 @@
+<div class="content">
+
+    <div class="portfolio-header">
+      <h2 class="title">Portfolio</h2>
+      <button (click)="loadData()">reload</button>
+    </div>
+  
+    <table class="cryptos-table">
+      <tr>
+        <th>ID</th>
+        <th></th>
+        <th>Name</th>
+        <th class="align-right">Price</th>
+        <th class="align-right">24h</th>
+        <th class="align-right">Updated at</th>
+      </tr>
+      <tr *ngFor="let coin of dataSource">
+        <!-- Router Links variations -->
+  
+        <td>
+          <!-- routerLink example -->
+          <a href routerLink="/crypto/{{coin.id}}">{{ coin.symbol | uppercase }}</a>
+        </td>
+  
+        <td>
+          <img [src]="coin.image" alt="Coin logo">
+        </td>
+  
+        <td>
+          <!-- Another routerLink example -->
+          <a [routerLink]="['/crypto',coin.id]">{{ coin.name }}</a>
+        </td>
+  
+        <td class="align-right">{{coin.value | currency }}</td>
+        <td class="align-right" appChangeColor [changeValue]="coin.change_last_24h">{{ coin.change_last_24h | changed }}</td>
+        <td class="align-right"><small>{{ coin.last_updated_at | date: 'HH:mm:ss dd.MM.yyyy' }}</small></td>
+      </tr>
+    </table>
+  
+  </div>
+  
